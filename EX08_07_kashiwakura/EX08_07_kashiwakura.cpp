@@ -52,15 +52,16 @@ int main()
     cin >> depth;
     Package* package = new Package(width, height, depth);
     package->GetPackageSize(kuroneko, japanpost);
-    if (kuroneko == 0) {
+    if (kuroneko == 0 && japanpost == 0) {
+    cout << "クロネコヤマト = 送れません" << "\n日本郵便(ゆうパック) = 送れません" << endl;
+    }
+    else if (kuroneko == 0) {
         cout << "クロネコヤマト = 送れません" << "\n日本郵便(ゆうパック) = " << japanpost << endl;
     }
     else if (japanpost == 0) {
         cout << "クロネコヤマト = " << kuroneko << "\n日本郵便(ゆうパック) = 送れません" << endl;
     }
-    else if (kuroneko == 0 && japanpost == 0) {
-        cout << "クロネコヤマト = 送れません" << "\n日本郵便(ゆうパック) = 送れません" << endl;
-    }
+    
     else {
         cout << "クロネコヤマト = " << kuroneko << "\n日本郵便(ゆうパック) = " << japanpost << endl;
     }
