@@ -142,8 +142,6 @@ public:
 
 int main()
 {
-    //float width, height, depth;
-    //int kuroneko, japanpost;
     Box box{ 60,50,40 };
     Cylinder cylinder{ 50,50 };
     Cone cone{ 35,20 };
@@ -152,5 +150,4 @@ int main()
     for (int i = 0; i < _countof(package); i++) {
         package[i].GetPackageSize();
     }
-    
 }
